@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shile Maslog | IT Student & Freelance Developer</title>
+    <meta name="description"
+        content="Portfolio and credentials of Shile Lleorah Maslog, a 4th-year BS Information Technology student at USTP and freelance full-stack web developer based in Cagayan de Oro City, Philippines.">
+
+    <!-- Google Fonts: Inter for a clean, neutral, professional look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for standard icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Header -->
+    <header>
+        <div class="nav-container container">
+            <a href="#home" class="logo" id="logo-nav">
+                Shile<span class="accent-dot">.</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#home" class="nav-link active" id="link-home">Home</a></li>
+                    <li><a href="#about" class="nav-link" id="link-about">About</a></li>
+                    <li><a href="#education" class="nav-link" id="link-education">Education</a></li>
+                    <li><a href="#skills" class="nav-link" id="link-skills">Skills</a></li>
+                    <li><a href="#projects" class="nav-link" id="link-projects">Projects</a></li>
+                    <li><a href="#contact" class="nav-link" id="link-contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon" id="theme-icon"></i>
+                </button>
+                <a href="#contact" class="btn btn-primary nav-cta" id="btn-desktop-nav">Contact Me</a>
+                <!-- Hamburger Menu for Mobile -->
+                <button class="hamburger" id="hamburger-menu" aria-label="Toggle Navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="subtitle-badge" id="badge-hero">
+                        USTP · BS Information Technology · 4th Year
+                    </div>
+                    <h1 class="hero-title" id="hero-title-main">
+                        Bringing your digital ideas to life with clean code and robust systems.
+                    </h1>
+                    <p class="hero-description" id="hero-desc-p">
+                        Based in Cagayan de Oro City, I am a 4th-year IT student and freelance developer
+                        specializing in full-stack web development and database management. I transform
+                        complex workflows into clean, reliable, and user-friendly digital systems.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary" id="btn-hero-projects">Explore Projects</a>
+                        <a href="#education" class="btn btn-secondary" id="btn-hero-edu">View Credentials</a>
+                    </div>
+                    <div class="hero-links">
+                        <a href="https://github.com/shyzhy" target="_blank" class="text-link" id="hero-link-github">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/shile-lleorah-maslog-851176284/" target="_blank"
+                            class="text-link" id="hero-link-linkedin">
+                            <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+                        </a>
+                        <a href="mailto:shyzhyshyy@gmail.com" class="text-link" id="hero-link-email">
+                            <i class="fa-regular fa-envelope"></i> Email
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="profile-image-container">
+                        <img src="./assets/profile.png" alt="Shile Maslog" class="profile-img" id="profile-img-main">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section-padding">
+            <div class="container about-container">
+                <div class="section-heading">
+                    <h2 class="section-title" id="title-about">About</h2>
+                    <p class="section-subtitle">A brief overview of my background, goals, and academic focus.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            I am a 4th-year BS in Information Technology student at the <strong>University of
+                                Science and Technology of Southern Philippines (USTP)</strong>, Cagayan de Oro Campus.
+                            My coursework covers software engineering lifecycles, relational database design,
+                            systems integration, and network administration.
+                        </p>
+                        <p>
+                            Outside of academics, I work as a freelance web and systems developer — building
+                            production-ready web applications and data-driven systems for clients. I am flexible,
+                            fast to adapt to new stacks, and committed to delivering maintainable, well-structured
+                            code on every project.
+                        </p>
+                        <p>
+                            I am currently open to <strong>OJT internship placements</strong> and
+                            <strong>freelance project collaborations</strong>. If you have a project in mind or
+                            are looking for a reliable junior developer, feel free to reach out.
+                        </p>
+                        <div class="cv-download-wrapper">
+                            <a href="./assets/resume.pdf" download class="btn btn-secondary" id="btn-download-resume">
+                                <i class="fa-solid fa-download"></i> Download Resume (PDF)
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="about-details">
+                        <div class="detail-card">
+                            <h4>Specialization Areas</h4>
+                            <ul class="clean-list">
+                                <li><i class="fa-solid fa-check text-accent"></i> Full-Stack Web Development</li>
+                                <li><i class="fa-solid fa-check text-accent"></i> Relational Database Design</li>
+                                <li><i class="fa-solid fa-check text-accent"></i> REST API Development</li>
+                                <li><i class="fa-solid fa-check text-accent"></i> UI/UX Design & Graphic Design</li>
+                                <li><i class="fa-solid fa-check text-accent"></i> Network Administration</li>
+                            </ul>
+                        </div>
+                        <div class="detail-card">
+                            <h4>Fast Facts</h4>
+                            <table class="facts-table">
+                                <tr>
+                                    <td><strong>Degree:</strong></td>
+                                    <td>BS Information Technology</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>University:</strong></td>
+                                    <td>USTP, CDO Campus</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Year Level:</strong></td>
+                                    <td>4th Year (2025–2026)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Location:</strong></td>
+                                    <td>Cagayan de Oro, PH</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Availability:</strong></td>
+                                    <td>Open to OJT & Freelance</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Credentials Timeline Section -->
+        <section id="education" class="education section-padding bg-alt">
+            <div class="container">
+                <div class="section-heading">
+                    <h2 class="section-title" id="title-education">Education & Credentials</h2>
+                    <p class="section-subtitle">My academic history, certifications, and professional milestones.</p>
+                </div>
+
+                <div class="timeline">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-row">
+                        <div class="timeline-meta">
+                            <span class="timeline-time">2022 – Present</span>
+                        </div>
+                        <div class="timeline-body">
+                            <h3>BS in Information Technology</h3>
+                            <p class="timeline-institution">University of Science and Technology of Southern Philippines
+                                (USTP), CDO Campus</p>
+                            <p class="timeline-desc">4th-year standing. Curriculum covers software engineering
+                                principles,
+                                database design and administration, systems analysis and design, web and mobile
+                                development,
+                                networking, and cybersecurity fundamentals. Engaged in multiple team capstone projects
+                                and
+                                hands-on laboratory work.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-row">
+                        <div class="timeline-meta">
+                            <span class="timeline-time">2024 – Present</span>
+                        </div>
+                        <div class="timeline-body">
+                            <h3>Freelance Web & Systems Developer</h3>
+                            <p class="timeline-institution">Independent / Remote</p>
+                            <p class="timeline-desc">Independently delivering web application projects for clients
+                                across
+                                various industries. Scope of work includes requirements gathering, UI/UX wireframing,
+                                full-stack development (frontend + backend), database schema design, deployment, and
+                                post-launch maintenance.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-row">
+                        <div class="timeline-meta">
+                            <span class="timeline-time">2025</span>
+                        </div>
+                        <div class="timeline-body">
+                            <h3>Cisco CCNA: Introduction to Networks</h3>
+                            <p class="timeline-institution">Cisco Networking Academy</p>
+                            <p class="timeline-desc">Completed foundational coursework in IP addressing, subnetting,
+                                routing protocols (OSPF, EIGRP), VLANs, DHCP, NAT, access control lists (ACLs), and
+                                network security configurations using Cisco Packet Tracer simulations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="skills section-padding">
+            <div class="container">
+                <div class="section-heading">
+                    <h2 class="section-title" id="title-skills">Technical Skills</h2>
+                    <p class="section-subtitle">Languages, frameworks, tools, and environments I work with.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Column 1 -->
+                    <div class="skills-col">
+                        <h3>Languages</h3>
+                        <ul class="skills-list">
+                            <li>
+                                <span class="skill-name">HTML5 / CSS3</span>
+                                <span class="skill-level">Proficient</span>
+                            </li>
+                            <li>
+                                <span class="skill-name">JavaScript (ES6+)</span>
+                                <span class="skill-level">Advanced</span>
+                            </li>
+                            <li>
+                                <span class="skill-name">TypeScript</span>
+                                <span class="skill-level">Intermediate</span>
+                            </li>
+                            <li>
+                                <span class="skill-name">PHP</span>
+                                <span class="skill-level">Proficient</span>
+                            </li>
+                            <li>
+                                <span class="skill-name">Python</span>
+                                <span class="skill-level">Intermediate</span>
+                            </li>
+                            <li>
+                                <span class="skill-name">SQL</span>
+                                <span class="skill-level">Proficient</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="skills-col">
+                        <h3>Frameworks & Libraries</h3>
+                        <ul class="skills-list">
+                            <li>
+                                <span class="skill-name">React.js</span>
+                                <span class="skill-level">Intermediate</span>
+                            </li>
+                            <li>
+                                <span class="skill-name">Laravel (PHP)</span>
+                                <span class="skill-level">Proficient</span>
+                            </li>
+                            <li>
+                                <span class="skill-name">Django (Python)</span>
+                                <span class="skill-level">Intermediate</span>
+                            </li>
+                            <li>
+                                <span class="skill-name">MySQL / PostgreSQL</span>
+                                <span class="skill-level">Proficient</span>
+                            </li>
+                            <li>
+                                <span class="skill-name">SQLite</span>
+                                <span class="skill-level">Proficient</span>
+                            </li>
+                            <li>
+                                <span class="skill-name">REST API Design</span>
+                                <span class="skill-level">Intermediate</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3 -->
+                    <div class="skills-col">
+                        <h3>Tools & Environments</h3>
+                        <ul class="skills-list">
+                            <li>
+                                <span class="skill-name">Git / GitHub</span>
+                                <span class="skill-level">Advanced</span>
+                            </li>
+                            <li>
+                                <span class="skill-name">VS Code / JetBrains IDEs</span>
+                                <span class="skill-level">Advanced</span>
+                            </li>
+                            <li>
+                                <span class="skill-name">Figma (UI Wireframing)</span>
+                                <span class="skill-level">Intermediate</span>
+                            </li>
+                            <li>
+                                <span class="skill-name">Cisco Packet Tracer</span>
+                                <span class="skill-level">Proficient</span>
+                            </li>
+                            <li>
+                                <span class="skill-name">Linux / Bash CLI</span>
+                                <span class="skill-level">Intermediate</span>
+                            </li>
+                            <li>
+                                <span class="skill-name">Docker (Containers)</span>
+                                <span class="skill-level">Basic</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section-padding bg-alt">
+            <div class="container">
+                <div class="section-heading">
+                    <h2 class="section-title" id="title-projects">Projects</h2>
+                    <p class="section-subtitle">A selection of academic, freelance, and personal systems I have built.
+                    </p>
+                </div>
+
+                <!-- Minimalist Category Filter -->
+                <div class="project-filter">
+                    <button class="filter-tab active" data-filter="all" id="filter-btn-all">All</button>
+                    <button class="filter-tab" data-filter="systems" id="filter-btn-systems">Systems</button>
+                    <button class="filter-tab" data-filter="web" id="filter-btn-web">Web Apps</button>
+
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid">
+
+                    <!-- Project 1: MedFlow -->
+                    <div class="project-item" data-category="systems web freelance" id="project-card-medflow">
+                        <div class="project-meta">
+                            <span class="project-tag">Systems</span>
+                            <span class="project-tag">Web</span>
+                        </div>
+                        <h3>MedFlow: Hospital Management System</h3>
+                        <p class="project-description">
+                            A full-stack Hospital Management System (HMS) for a private clinic client. Covers
+                            patient registration, appointment scheduling, doctor queue management, and digital
+                            medical record-keeping. Built with a secure Django REST backend and a React
+                            frontend dashboard.
+                        </p>
+                        <div class="project-tech-used">
+                            <code>React</code> <code>TypeScript</code> <code>Django</code>
+                            <code>PostgreSQL</code> <code>REST API</code> <code>Python</code>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/shyzhy/HospitalManagementSystem" target="_blank"
+                                class="action-link" id="link-medflow-code">
+                                <i class="fa-brands fa-github"></i> Repository
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Foodie Kart -->
+                    <div class="project-item" data-category="systems web freelance" id="project-card-foodiekart">
+                        <div class="project-meta">
+                            <span class="project-tag">Systems</span>
+                            <span class="project-tag">Web</span>
+
+                        </div>
+                        <h3>Foodie Kart — Digital Ordering System</h3>
+                        <p class="project-description">
+                            A web-based ordering platform built for a local food MSME to replace pen-and-paper
+                            workflows. Features a customer-facing digital menu with cart and checkout, connected
+                            to a real-time kitchen dashboard for order queue management and status tracking.
+                        </p>
+                        <div class="project-tech-used">
+                            <code>Laravel</code> <code>PHP</code> <code>Blade</code>
+                            <code>SQLite</code> <code>PostgreSQL</code>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/shyzhy/FoodieKart" target="_blank" class="action-link"
+                                id="link-foodiekart-code">
+                                <i class="fa-brands fa-github"></i> Repository
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-padding">
+            <div class="container contact-container-simple">
+                <div class="section-heading">
+                    <h2 class="section-title" id="title-contact">Contact</h2>
+                    <p class="section-subtitle">Open to OJT placements, freelance projects, and collaborations.</p>
+                </div>
+
+                <div class="contact-methods">
+                    <p class="contact-intro">
+                        Whether you'd like to discuss an internship opportunity, commission a web project,
+                        or simply verify my credentials — feel free to reach out through any of the channels below.
+                        I typically respond within 24 hours.
+                    </p>
+                    <div class="contact-cards">
+                        <a href="mailto:shyzhyshyy@gmail.com" class="contact-card">
+                            <div class="contact-card-icon"><i class="fa-regular fa-envelope"></i></div>
+                            <div class="contact-card-info">
+                                <span class="contact-card-label">Email</span>
+                                <span class="contact-card-value">shyzhyshyy@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/shile-lleorah-maslog-851176284/" target="_blank"
+                            class="contact-card">
+                            <div class="contact-card-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                            <div class="contact-card-info">
+                                <span class="contact-card-label">LinkedIn</span>
+                                <span class="contact-card-value">shile-lleorah-maslog</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/shyzhy" target="_blank" class="contact-card">
+                            <div class="contact-card-icon"><i class="fa-brands fa-github"></i></div>
+                            <div class="contact-card-info">
+                                <span class="contact-card-label">GitHub</span>
+                                <span class="contact-card-value">github.com/shyzhy</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-brand">
+                Shile Lleorah Maslog &mdash; IT Student & Freelance Developer
+            </div>
+            <p class="footer-copyright">&copy; 2026. Built with HTML & CSS. Cagayan de Oro, Philippines.</p>
+        </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
