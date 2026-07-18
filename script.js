@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ==========================================
-    // 1. MOBILE NAVIGATION
-    // ==========================================
+    
+    
+    
     const hamburger = document.getElementById('hamburger-menu');
     const navMenu = document.getElementById('nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ==========================================
-    // 2. SCROLL ACTIVE NAV LINK
-    // ==========================================
+    
+    
+    
     const sections = document.querySelectorAll('section[id]');
 
     const onScroll = () => {
@@ -46,9 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', onScroll, { passive: true });
 
-    // ==========================================
-    // 3. WORK FILTER
-    // ==========================================
+    
+    
+    
     const filterBtns = document.querySelectorAll('.filter-btn');
     const workItems = document.querySelectorAll('.work-item');
     const workEmpty = document.getElementById('work-empty');
@@ -77,9 +77,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ==========================================
-    // 4. THEME TOGGLE
-    // ==========================================
+    
+    
+    
     const themeBtn = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
 
