@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // ==========================================
-    // MOBILE NAVIGATION DIALOG/DRAWER
+    // 1. MOBILE NAVIGATION
     // ==========================================
     const hamburger = document.getElementById('hamburger-menu');
     const navMenu = document.getElementById('nav-menu');
@@ -9,107 +9,102 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (hamburger && navMenu) {
         hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
         });
 
-        // Close menu when a link is clicked
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
             });
         });
     }
 
     // ==========================================
-    // SCROLL-ACTIVE LINK STATE
+    // 2. SCROLL ACTIVE NAV LINK
     // ==========================================
-    const sections = document.querySelectorAll('section');
-    
-    const handleScrollActiveLink = () => {
-        let scrollY = window.pageYOffset;
+    const sections = document.querySelectorAll('section[id]');
 
-        sections.forEach(current => {
-            const sectionHeight = current.offsetHeight;
-            const sectionTop = current.offsetTop - 100; // Offset for header height
-            const sectionId = current.getAttribute('id');
-            
-            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                document.querySelector(`.nav-menu a[href*=${sectionId}]`)?.classList.add('active');
-            } else {
-                document.querySelector(`.nav-menu a[href*=${sectionId}]`)?.classList.remove('active');
+    const onScroll = () => {
+        const scrollY = window.pageYOffset;
+
+        sections.forEach(section => {
+            const top = section.offsetTop - 100;
+            const height = section.offsetHeight;
+            const id = section.getAttribute('id');
+            const link = document.querySelector(`.nav-link[href="#${id}"]`);
+
+            if (link) {
+                if (scrollY >= top && scrollY < top + height) {
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+                }
             }
         });
     };
 
-    window.addEventListener('scroll', handleScrollActiveLink);
+    window.addEventListener('scroll', onScroll, { passive: true });
 
     // ==========================================
-    // PROJECT FILTERING FUNCTIONALITY
+    // 3. WORK FILTER
     // ==========================================
-    const filterTabs = document.querySelectorAll('.filter-tab');
-    const projectItems = document.querySelectorAll('.project-item');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const workItems = document.querySelectorAll('.work-item');
+    const workEmpty = document.getElementById('work-empty');
 
-    filterTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            // Remove active state from all tabs
-            filterTabs.forEach(t => t.classList.remove('active'));
-            // Add active state to clicked tab
-            tab.classList.add('active');
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
 
-            const filterValue = tab.getAttribute('data-filter');
+            const filter = btn.getAttribute('data-filter');
+            let visibleCount = 0;
 
-            projectItems.forEach(item => {
-                const categories = item.getAttribute('data-category').split(' ');
-                
-                if (filterValue === 'all' || categories.includes(filterValue)) {
+            workItems.forEach(item => {
+                const cat = item.getAttribute('data-category');
+                if (filter === 'all' || cat === filter) {
                     item.style.display = 'flex';
+                    visibleCount++;
                 } else {
                     item.style.display = 'none';
                 }
             });
+
+            if (workEmpty) {
+                workEmpty.style.display = visibleCount === 0 ? 'flex' : 'none';
+            }
         });
     });
 
-
-
     // ==========================================
-    // LIGHT & DARK THEME TOGGLE
+    // 4. THEME TOGGLE
     // ==========================================
-    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeBtn = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
-    
-    // Check saved theme or system theme preference
-    const savedTheme = localStorage.getItem('theme');
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    // Default to dark theme unless saved otherwise
-    const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
-    
-    const setTheme = (theme) => {
+
+    const saved = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initial = saved || (prefersDark ? 'dark' : 'light');
+
+    const applyTheme = (theme) => {
         if (theme === 'light') {
             document.documentElement.setAttribute('data-theme', 'light');
-            if (themeIcon) {
-                themeIcon.className = 'fa-solid fa-sun';
-            }
-            localStorage.setItem('theme', 'light');
+            if (themeIcon) themeIcon.className = 'fa-solid fa-sun';
         } else {
             document.documentElement.removeAttribute('data-theme');
-            if (themeIcon) {
-                themeIcon.className = 'fa-solid fa-moon';
-            }
-            localStorage.setItem('theme', 'dark');
+            if (themeIcon) themeIcon.className = 'fa-solid fa-moon';
         }
+        localStorage.setItem('theme', theme);
     };
-    
-    // Initialize theme
-    setTheme(initialTheme);
-    
-    if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
-            setTheme(currentTheme === 'light' ? 'dark' : 'light');
+
+    applyTheme(initial);
+
+    if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+            const current = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+            applyTheme(current === 'light' ? 'dark' : 'light');
         });
     }
+
 });
